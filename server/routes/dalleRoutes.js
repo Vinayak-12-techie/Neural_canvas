@@ -30,7 +30,7 @@ router.route("/").post(async (req, res) => {
     res.status(200).json({ photo: image });
   } catch (err) {
     console.error(err);
-    res.status(500).send(err?.response.data.err.message);
+    res.status(500).send(err?.response.data.err);
   }
 });
 
